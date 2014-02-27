@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable atom-pastie': 'atom-pastie:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'atom-pastie'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'atom-pastie:toggle' }
+      ]
+    ]
+  }
+]
