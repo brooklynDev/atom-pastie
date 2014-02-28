@@ -1,7 +1,7 @@
 {
   "name": "atom-pastie",
   "main": "./lib/atom-pastie",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Create a pastie directly from atom.",
   "activationEvents": [
