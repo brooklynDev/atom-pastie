@@ -1,11 +1,11 @@
 {
   "name": "atom-pastie",
   "main": "./lib/atom-pastie",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "A short description of your package",
-  "activationEvents": ["atom-pastie:toggle"],
-  "repository": "https://github.com/atom/atom-pastie",
+  "description": "Create a pastie directly from atom.",
+  "activationEvents": ["atom-pastie:pastie"],
+  "repository": "https://github.com/brooklynDev/atom-pastie",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
