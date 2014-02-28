@@ -26,14 +26,15 @@ class AtomPastieView extends View
 
 
   pastie: ->
-    view = @createView()
-    atom.workspaceView.append(view)
-
     editor = atom.workspace.activePaneItem
     selection = editor.getSelection()
-    pastie.sendToPastie selection.getText(), (link) ->
+    if !selection.getText()
+      return
+    view = @createView()
+    atom.workspaceView.append(view)
+    pastie.sendToPastie selection.getText(),atom.workspace.activePaneItem.getTitle(), (link) ->
       view.append $$ ->
         atom.workspaceView.one 'core:cancel', -> view.remove()
         view.empty().focus().on 'focusout', -> view.remove()
         atom.clipboard.write(link)
-        @div class: 'text-success', 'Pastie created. Link: ' + link
+        @div class: 'text-success', 'Pastie created and copied to clipboard. Link: ' + link
